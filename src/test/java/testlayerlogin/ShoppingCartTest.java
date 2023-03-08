@@ -4,8 +4,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import basePackage.BaseAmazonClass;
@@ -22,10 +22,10 @@ public class ShoppingCartTest extends BaseAmazonClass {
 
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void initsetup() {
 		initiate();
-
+		screenshots("Shoppingcart");
 		Cart = new pomShoppingCart();
 		action = new Actions(Driver);
 		Signin = new pomSigninAmazon();
@@ -140,25 +140,33 @@ public class ShoppingCartTest extends BaseAmazonClass {
 		Driver.findElement(By.cssSelector("#select-all")).click();
 
 	}
-	@Test(priority=6)
-	public void ReopeningBrowserToCheckTheCart() {		
-		action.moveToElement(Driver.findElement(By.cssSelector("#nav-cart"))).build().perform();
-		Driver.findElement(By.cssSelector("#nav-cart")).click();	
-	}
-	@Test(priority=7)
-	public void ValidQuantityDropdownmenu () {
+
+	@Test(priority = 6)
+	public void ReopeningBrowserToCheckTheCart() {
 		action.moveToElement(Driver.findElement(By.cssSelector("#nav-cart"))).build().perform();
 		Driver.findElement(By.cssSelector("#nav-cart")).click();
-		
-		action.moveToElement(Driver.findElement(By.cssSelector("#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)"))).build().perform();
-		Driver.findElement(By.cssSelector("#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)")).click();
-		Select obj = new Select(
-		Driver.findElement(By.cssSelector("#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)\")).click();\r\n")));
+	}
+
+	@Test(priority = 7)
+	public void ValidQuantityDropdownmenu() {
+		action.moveToElement(Driver.findElement(By.cssSelector("#nav-cart"))).build().perform();
+		Driver.findElement(By.cssSelector("#nav-cart")).click();
+
+		action.moveToElement(Driver.findElement(By.cssSelector(
+				"#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)")))
+				.build().perform();
+		Driver.findElement(By.cssSelector(
+				"#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)"))
+				.click();
+		Select obj = new Select(Driver.findElement(By.cssSelector(
+				"#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)\")).click();\r\n")));
 		obj.selectByVisibleText("2");
-		
-    }
-	
-	  @AfterTest public void close() {
-		  Driver.close();}
-	 
-    }
+
+	}
+
+	@AfterMethod
+	public void close() {
+		Driver.close();
+	}
+
+}

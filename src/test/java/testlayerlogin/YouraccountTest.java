@@ -3,27 +3,39 @@ package testlayerlogin;
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import basePackage.BaseAmazonClass;
 import pomAmazonpackage.PomYourAccount;
+import pomAmazonpackage.pomSigninAmazon;
 
 public class YouraccountTest extends BaseAmazonClass {
-
+	
+	pomSigninAmazon Signin; 
 	PomYourAccount Acc;
-
+	Actions action;
 	public YouraccountTest() {
 
 		super();
 
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void initsetup() throws InterruptedException {
 		initiate();
+		screenshots("Youraccount");
 		Acc = new PomYourAccount();
+		Signin = new pomSigninAmazon();
+
+		action = new Actions(Driver);
+		action.moveToElement(Driver.findElement(By.cssSelector("#nav-link-accountList"))).build().perform();
+		Driver.findElement(By.cssSelector("#nav-link-accountList")).click();
+		Signin.typeemailaddressormobilephonenumber("lilyrosy1978@gmail.com");
+		Signin.continuebtn();
+		Signin.typepassword("22yardley");
+		Signin.Signin();
 
 	}
 
@@ -62,7 +74,7 @@ public class YouraccountTest extends BaseAmazonClass {
 
 	}
 
-	@AfterTest
+	@AfterMethod
 	public void close() {
 		Driver.close();
 	}

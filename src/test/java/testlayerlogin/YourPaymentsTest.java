@@ -4,7 +4,9 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -22,9 +24,11 @@ public class YourPaymentsTest extends BaseAmazonClass {
 		super();
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void initsetup() {
 		initiate();
+		screenshots("YourPayments");
+		
 		Signin = new pomSigninAmazon();
 
 		action = new Actions(Driver);
@@ -51,15 +55,15 @@ public class YourPaymentsTest extends BaseAmazonClass {
 		Driver.findElement(By.cssSelector(
 				"#a-page > div.a-container > div > div:nth-child(3) > div:nth-child(2) > a > div > div > div > div.a-column.a-span3 > img"))
 				.click();
-		/* Driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS); */
+		Driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
 		
-        action.moveToElement(Driver.findElement(By.cssSelector("#pp-nnPpdU-9 > div > div > div.a-fixed-left-grid-col.a-col-left > img"))).build().perform();
-		Driver.findElement(By.cssSelector("#pp-nnPpdU-9 > div > div > div.a-fixed-left-grid-col.a-col-left > img"))
+        action.moveToElement(Driver.findElement(By.xpath("//*[@id=\"pp-3yTVgn-10\"]"))).build().perform();
+		Driver.findElement(By.xpath("//*[@id=\"pp-3yTVgn-10\"]"))
 				.click();		
 
 	}
 
-  @AfterTest
+  @AfterMethod
   public void Close()
   { Driver.close();
 }}

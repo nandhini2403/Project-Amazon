@@ -32,9 +32,9 @@ public class pomGuestAccount extends BaseAmazonClass{
 	@FindBy(xpath = "//*[@id=\"sc-item-ddcd790e-3176-4b37-896c-eb6cef016f53\"]/div[3]/div[2]/text()")
 	WebElement Shoppingcart;
 
-
+	//initiate page elements located by @FindBy, for this we need to create constructor
 public pomGuestAccount() {
-	PageFactory.initElements(Driver, this);
+	PageFactory.initElements(Driver, this);  //"init Element" is a static method in Pagefactory ,'this' converts local into global variable	
 }
 
 public void DealsStore() {

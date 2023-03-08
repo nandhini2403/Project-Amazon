@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Suite1]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test1(failed)">
+    <classes>
+      <class name="testlayerlogin.ShoppingCartTest">
+        <methods>
+          <include name="close"/>
+          <include name="ReopeningBrowserToCheckTheCart"/>
+          <include name="validAddtocartButton"/>
+          <include name="initsetup"/>
+          <include name="ValidQuantityDropdownmenu"/>
+          <include name="DeselectAllItemsFromCart"/>
+          <include name="SelectAllItemsFromCart"/>
+          <include name="addingmultipleitemstocart"/>
+        </methods>
+      </class> <!-- testlayerlogin.ShoppingCartTest -->
+      <class name="testlayerlogin.GuestAccountTest">
+        <methods>
+          <include name="validSearchbar"/>
+          <include name="validSearchoption"/>
+          <include name="validProceedtocheckout"/>
+          <include name="validBestSellers"/>
+          <include name="validSelection"/>
+          <include name="Close"/>
+          <include name="initsetup"/>
+          <include name="validDealsStore"/>
+        </methods>
+      </class> <!-- testlayerlogin.GuestAccountTest -->
+      <class name="testlayerlogin.YourAddressTest">
+        <methods>
+          <include name="initsetup"/>
+          <include name="VerifyValidAddress"/>
+          <include name="close"/>
+        </methods>
+      </class> <!-- testlayerlogin.YourAddressTest -->
+    </classes>
+  </test> <!-- Test1(failed) -->
+</suite> <!-- Failed suite [Suite1] -->

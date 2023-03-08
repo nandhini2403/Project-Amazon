@@ -1,88 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="6" total="7" passed="0" failed="1" skipped="0">
+<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-14T12:21:47 EST" name="Default suite" finished-at="2023-02-14T12:21:55 EST" duration-ms="7139">
+  <suite started-at="2023-03-08T01:21:25 EST" name="Default suite" finished-at="2023-03-08T01:23:56 EST" duration-ms="151328">
     <groups>
     </groups>
-    <test started-at="2023-02-14T12:21:47 EST" name="Default test" finished-at="2023-02-14T12:21:55 EST" duration-ms="7139">
-      <class name="testlayerlogin.ShoppingCartTest">
-        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.ShoppingCartTest@6356695f]" started-at="2023-02-14T12:21:47 EST" name="initsetup" finished-at="2023-02-14T12:21:51 EST" duration-ms="3371" status="PASS">
+    <test started-at="2023-03-08T01:21:25 EST" name="Default test" finished-at="2023-03-08T01:23:56 EST" duration-ms="151328">
+      <class name="testlayerlogin.SearchTest">
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:25 EST" name="initsetup" finished-at="2023-03-08T01:21:27 EST" duration-ms="2298" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initsetup -->
-        <test-method signature="ValidQuantityDropdownmenu()[pri:7, instance:testlayerlogin.ShoppingCartTest@6356695f]" started-at="2023-02-14T12:21:51 EST" name="ValidQuantityDropdownmenu" finished-at="2023-02-14T12:21:55 EST" duration-ms="3744" status="FAIL">
-          <exception class="org.openqa.selenium.InvalidSelectorException">
-            <message>
-              <![CDATA[invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=109.0.5414.121)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-B8A8UDTS', ip: '192.168.2.32', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\14373\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 939cf18094392e789eef2f4321bd2449
-*** Element info: {Using=css selector, value=#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)")).click();
-}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidSelectorException: invalid selector: An invalid or illegal selector was specified
-  (Session info: chrome=109.0.5414.121)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/invalid_selector_exception.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'LAPTOP-B8A8UDTS', ip: '192.168.2.32', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '19.0.1'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 109.0.5414.121, chrome: {chromedriverVersion: 109.0.5414.74 (e7c5703604da..., userDataDir: C:\Users\14373\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:58428}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 939cf18094392e789eef2f4321bd2449
-*** Element info: {Using=css selector, value=#sc-active-Cbe87afdd-7979-493f-a876-5429d17564f2 > div.sc-list-item-content > div > div:nth-child(3) > div.a-row.sc-action-links > span.sc-action-quantity > span > span:nth-child(1)")).click();
-}
-at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:484)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:420)
-at org.openqa.selenium.By$ByCssSelector.findElement(By.java:431)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at testlayerlogin.ShoppingCartTest.ValidQuantityDropdownmenu(ShoppingCartTest.java:156)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
-at java.base/java.lang.reflect.Method.invoke(Method.java:578)
-at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
-at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
-at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
-at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
-at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
-at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
-at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:794)
-at org.testng.TestRunner.run(TestRunner.java:596)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
-at org.testng.SuiteRunner.run(SuiteRunner.java:276)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
-at org.testng.TestNG.runSuites(TestNG.java:1063)
-at org.testng.TestNG.run(TestNG.java:1031)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidSelectorException -->
+        <test-method signature="validAllbutton()[pri:1, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:27 EST" name="validAllbutton" finished-at="2023-03-08T01:21:28 EST" duration-ms="748" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ValidQuantityDropdownmenu -->
-      </class> <!-- testlayerlogin.ShoppingCartTest -->
+        </test-method> <!-- validAllbutton -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:28 EST" name="Close" finished-at="2023-03-08T01:21:28 EST" duration-ms="113" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:28 EST" name="initsetup" finished-at="2023-03-08T01:21:30 EST" duration-ms="2407" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchKEYWORD()[pri:2, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:30 EST" name="validSearchKEYWORD" finished-at="2023-03-08T01:21:38 EST" duration-ms="7304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchKEYWORD -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:38 EST" name="Close" finished-at="2023-03-08T01:21:54 EST" duration-ms="16224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:54 EST" name="initsetup" finished-at="2023-03-08T01:21:56 EST" duration-ms="2109" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchDESCRIPTIONTEXT()[pri:3, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:21:56 EST" name="validSearchDESCRIPTIONTEXT" finished-at="2023-03-08T01:22:03 EST" duration-ms="7149" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchDESCRIPTIONTEXT -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:03 EST" name="Close" finished-at="2023-03-08T01:22:19 EST" duration-ms="16196" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:19 EST" name="initsetup" finished-at="2023-03-08T01:22:22 EST" duration-ms="2124" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchMODELNO()[pri:4, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:22 EST" name="validSearchMODELNO" finished-at="2023-03-08T01:22:29 EST" duration-ms="7095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchMODELNO -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:29 EST" name="Close" finished-at="2023-03-08T01:22:45 EST" duration-ms="16218" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:45 EST" name="initsetup" finished-at="2023-03-08T01:22:47 EST" duration-ms="2142" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchPARTIALMODELNO()[pri:5, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:47 EST" name="validSearchPARTIALMODELNO" finished-at="2023-03-08T01:22:54 EST" duration-ms="6627" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchPARTIALMODELNO -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:22:54 EST" name="Close" finished-at="2023-03-08T01:23:10 EST" duration-ms="16197" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:10 EST" name="initsetup" finished-at="2023-03-08T01:23:12 EST" duration-ms="2251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchPRODUCTRELEVANCY()[pri:6, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:12 EST" name="validSearchPRODUCTRELEVANCY" finished-at="2023-03-08T01:23:19 EST" duration-ms="7194" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchPRODUCTRELEVANCY -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:19 EST" name="Close" finished-at="2023-03-08T01:23:35 EST" duration-ms="16173" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+        <test-method is-config="true" signature="initsetup()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:35 EST" name="initsetup" finished-at="2023-03-08T01:23:38 EST" duration-ms="2320" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initsetup -->
+        <test-method signature="validSearchSORTBY()[pri:7, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:38 EST" name="validSearchSORTBY" finished-at="2023-03-08T01:23:40 EST" duration-ms="2119" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validSearchSORTBY -->
+        <test-method is-config="true" signature="Close()[pri:0, instance:testlayerlogin.SearchTest@333291e3]" started-at="2023-03-08T01:23:40 EST" name="Close" finished-at="2023-03-08T01:23:56 EST" duration-ms="16286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Close -->
+      </class> <!-- testlayerlogin.SearchTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

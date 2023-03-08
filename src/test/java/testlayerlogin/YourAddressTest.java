@@ -5,7 +5,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeTest;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 import basePackage.BaseAmazonClass;
@@ -22,9 +22,11 @@ public class YourAddressTest extends BaseAmazonClass {
 		super();
 	}
 
-	@BeforeTest
+	@BeforeMethod
 	public void initsetup() {
-		initiate();
+		initiate();		
+		screenshots("YourAddress");
+		
 		Signin = new pomSigninAmazon();
 
 		action = new Actions(Driver);
@@ -115,7 +117,7 @@ public class YourAddressTest extends BaseAmazonClass {
 		Driver.findElement(By.cssSelector("#ya-myab-address-add-link > div > div > h2")).click();
 
 		Address.Name("Lilyrosy");
-		Address.Phonenumber("4373443059");
+		Address.Phonenumber("0123456789");
 		Address.Address1("yardleycrescent");
 		Address.Address2("22");
 		Address.City("Brampton");
@@ -123,13 +125,14 @@ public class YourAddressTest extends BaseAmazonClass {
 				Driver.findElement(By.id("address-ui-widgets-enterAddressStateOrRegion-dropdown-nativeId")));
 		obj.selectByVisibleText("Ontario");
 		Address.Postalcode("L6X5L6");
-
-		action.moveToElement(Driver.findElement(By.cssSelector("#address-ui-widgets-form-submit-button-announce")))
+        
+		Thread.sleep(1000);
+		action.moveToElement(Driver.findElement(By.id("address-ui-widgets-form-submit-button-announce")))
 				.build().perform();
-		Driver.findElement(By.cssSelector("#address-ui-widgets-form-submit-button-announce")).click();
+		Driver.findElement(By.id("address-ui-widgets-form-submit-button-announce")).click();
 
 	}
-
+	
 	@AfterMethod
 	public void close() {
 		Driver.close();

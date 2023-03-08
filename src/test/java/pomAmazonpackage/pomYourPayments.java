@@ -11,7 +11,7 @@ public class pomYourPayments extends BaseAmazonClass{
 	@FindBy(css="#a-page > div.a-container > div > div:nth-child(3) > div:nth-child(2) > a > div > div > div > div.a-column.a-span3 > img")
 	WebElement YourPayments;
 	
-	@FindBy(css="#pp-nnPpdU-9 > div > div > div.a-fixed-left-grid-col.a-col-left > img")
+	@FindBy(xpath="//*[@id=\"pp-3yTVgn-10\"]")
 	WebElement AddaPaymentMethod;
 	
 	@FindBy(css="#pp-Pf5ibv-26-announce")
